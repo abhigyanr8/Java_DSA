@@ -1,3 +1,5 @@
+package BinarySearch;
+
 public class NoOfRotaions
 {
     public int noOfRotation(int[] a)

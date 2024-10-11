@@ -9,10 +9,10 @@ public class Main {
         char[] charArray = new char[]{'a','b','c','d'};
         int[] piles = new int[]{332484035,524908576,855865114,632922376,222257295,690155293,112677673,679580077,337406589,290818316,877337160,901728858,679284947,688210097,692137887,718203285,629455728,941802184};
         List<Integer> result = new ArrayList<Integer>();
-        //System.out.println(new BinarySearch().binarySearch(array,0,9,6));
-        //System.out.println(new NoOfRotaions().noOfRotation(reverseSortedArray));
-        //System.out.println(new CeilOfAnElement().ceilOfAnElement(array,));
-        //System.out.println(new NextAlphabeticalElement().nextAlphabeticalElement(charArray,'d'));
+        //System.out.println(new BinarySearch.BinarySearch().binarySearch(array,0,9,6));
+        //System.out.println(new BinarySearch.NoOfRotaions().noOfRotation(reverseSortedArray));
+        //System.out.println(new BinarySearch.CeilOfAnElement().ceilOfAnElement(array,));
+        //System.out.println(new BinarySearch.NextAlphabeticalElement().nextAlphabeticalElement(charArray,'d'));
         //System.out.println(new FirstOccurence().firstOccurence(array,7));
 //        for(int i=0;i<array.length;i++)
 //            System.out.print(array[i]+" ");
