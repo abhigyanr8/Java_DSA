@@ -1,15 +1,17 @@
-public class NextAlphabeticalElement
+package BinarySearch;
+
+public class CeilOfAnElement
 {
-    public char nextAlphabeticalElement(char[] a,char ch)
+    public int ceilOfAnElement(int[] a,int element)
     {
         int l=0;
         int r=a.length-1;
-        char result='0';
+        int result=-1;
 
         while(l<=r)
         {
-            int mid=l+(r-l)/2;
-            if(a[mid]>ch)
+            int mid = l+(r-l)/2;
+            if(a[mid]>element)
             {
                 result=a[mid];
                 r=mid-1;
@@ -17,6 +19,7 @@ public class NextAlphabeticalElement
             else {
                 l=mid+1;
             }
+
         }
         return result;
     }
