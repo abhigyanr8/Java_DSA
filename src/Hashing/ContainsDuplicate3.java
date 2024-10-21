@@ -4,32 +4,42 @@ import java.util.*;
 
 public class ContainsDuplicate3
 {
-    //1 2 2 3 1
     public boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {
-        TreeMap<Integer,Integer> treemap = new TreeMap<>();
-        int lower=0,higher=0;
-        for(int i=0;i<indexDiff;i++){
-            treemap.put(nums[i],treemap.getOrDefault(nums[i],0)+1);}
-        if(treemap.higherKey(nums[0])!=null)
-           higher = treemap.higherKey(nums[0]);
-        if(treemap.lowerKey(nums[0])!=null)
-            lower = treemap.lowerKey(nums[0]);
-        if(higher!=0&&(higher-nums[0])<=valueDiff) {return true;}
-        if(lower!=0&&(nums[0]-lower)<=valueDiff) {return true;}
-          for(int i=indexDiff+1;i<nums.length;i++){
-              lower=0;
-              higher=0;
-              treemap.put(nums[i],treemap.getOrDefault(nums[i],0)+1);
-              treemap.put(nums[i-indexDiff],treemap.get(nums[i-indexDiff])-1);
-              if(treemap.get(nums[i-indexDiff])==0)
-                  treemap.remove(nums[i-indexDiff]);
-              if(treemap.higherKey(nums[i-indexDiff])!=null)
-                  higher = treemap.higherKey(nums[i-indexDiff]);
-              if(treemap.lowerKey(nums[i-indexDiff])!=null)
-                  lower = treemap.lowerKey(nums[i-indexDiff]);
-              if(higher!=0&&higher-nums[i-indexDiff]<=valueDiff) {return true;}
-              if(lower!=0&&nums[i-indexDiff]-lower<=valueDiff) {return true;}
-          }
-          return false;
+        TreeMap<Integer,Integer> treeMap = new TreeMap<>();
+        if(indexDiff>=nums.length){
+            indexDiff = nums.length -1;
+        }
+        for(int i=1;i<=indexDiff;i++){
+            treeMap.put(nums[i],treeMap.getOrDefault(nums[i],0)+1);
+            System.out.println(nums[i]);
+        }
+        System.out.println(0);
+        if(treeMap.containsKey(nums[0])) return true;
+        if(treeMap.higherKey(nums[0])!=null){
+            System.out.println("higher "+treeMap.higherKey(nums[0]));
+            if(treeMap.higherKey(nums[0])-nums[0]<=valueDiff) return true;
+        }
+       if(treeMap.lowerKey(nums[0])!=null){
+            System.out.println("lower "+treeMap.lowerKey(nums[0]));
+            if(nums[0]-treeMap.lowerKey(nums[0])<=valueDiff) return true;
+        }
+        for(int i=indexDiff+1;i<nums.length;i++){
+            treeMap.put(nums[i],treeMap.getOrDefault(nums[i],treeMap.getOrDefault(nums[i],0))+1);
+            treeMap.put(nums[i-indexDiff],treeMap.get(nums[i-indexDiff])-1);
+            if(treeMap.get(nums[i-indexDiff])==0)
+                treeMap.remove(nums[i-indexDiff]);
+            System.out.println(treeMap);
+            System.out.println("result "+ (i-indexDiff));
+            if(treeMap.containsKey(nums[i-indexDiff])) return true;
+            if(treeMap.higherKey(nums[i-indexDiff])!=null){
+                System.out.println("higher "+treeMap.higherKey(nums[i-indexDiff]));
+                if(treeMap.higherKey(nums[i-indexDiff])-nums[i-indexDiff]<=valueDiff) return true;
+            }
+            if(treeMap.lowerKey(nums[i-indexDiff])!=null){
+                System.out.println("lower "+treeMap.lowerKey(nums[i-indexDiff]));
+                if(nums[i-indexDiff]-treeMap.lowerKey(nums[i-indexDiff])<=valueDiff) return true;
+            }
+        }
+        return false;
     }
 }
