@@ -1,13 +1,14 @@
 package BinarySearch;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class KokoEatingBananas {
     public int minEatingSpeed(int[] piles, int h) {
-        Arrays.sort(piles);
-        int maxSpeed = piles[piles.length-1];
+        int maxSpeed = Arrays.stream(piles).max().orElseThrow();
         int minSpeed = 1;
         int mid;
+        Arrays.stream(piles).max();
         while(minSpeed <= maxSpeed){
             mid = minSpeed +(maxSpeed - minSpeed)/2 ;
             long h1 = calculateHforSpeed(piles , mid);
@@ -19,7 +20,7 @@ public class KokoEatingBananas {
     public long calculateHforSpeed(int[] piles , int speed){
         long h=0;
         for(int i=0; i< piles.length; i++){
-            h += (piles[i] % speed) == 0 ? (piles[i] / speed) : (piles[i] / speed) + 1;
+            h += (piles[i] + speed - 1) / speed;  // Efficient ceiling of pile/speed
         }
         return h;
     }
