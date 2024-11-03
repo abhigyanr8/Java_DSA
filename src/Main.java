@@ -1,4 +1,6 @@
 import BinarySearch.CountOfSmallerNumberAfterSelf;
+import BinarySearch.KokoEatingBananas;
+import BinarySearch.KthSmallestDifferenceArray;
 import Graphs.MaximumWidthOfBinaryTree;
 //import Graphs.NextRightPointer;
 //import Hashing.ContainsDuplicate3;
@@ -15,46 +17,24 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        System.out.println(new minWindow().minWindow("cabwefgewcwaefgcf","cae"));
-        int[] test = new int[]{5,2,6,1};
-        int[] result = new int[test.length];
-        TreeNode treeNode = new TreeNode(1);
-        treeNode.right = new TreeNode(2);
-        treeNode.left = new TreeNode(3);
-        List<Integer> rightList = new ArrayList<>();
-        rightList.add(1);
-        rightList.add(1);
-        rightList.add(2);
-        rightList.add(3);
-        rightList.add(3);
-        rightList.add(5);
-        rightList.add(6);
-        rightList.add(6);
-        rightList.add(6);
-
-
-//        Node node = new Node(1);
-//        node.left = new Node(2);
-//        node.right = new Node(3);
-//        System.out.println("node -> right "+node.right);
-//        System.out.println(new NextRightPointer().connect(node));
-//        System.out.println("node " +node.next);
-//        System.out.println("left -> next " +node.left.next);
-//        System.out.println("right -> next " +node.right.next);
-       // System.out.println(new MaximumWidthOfBinaryTree().widthOfBinaryTree(treeNode));
-//        System.out.println(new KDifferentIntger().subarraysWithKDistinct(test,2));
-      //  System.out.println(new ContainsDuplicate3().containsNearbyAlmostDuplicate(test,2,3));
-//        result = new KSizeSubarraysI().resultsArray(test,3);
-//        for(int a : result){
-//            System.out.print(a+" ");
+        int[] test = new int[]{805306368,805306368,805306368};
+//        int[] sortedDiff = new int[3];
+//        int index =0;
+//        Arrays.sort(test);
+//        for(int i=0 ; i<test.length ; i++){
+//            for(int j= i+1 ; j<test.length ; j++){
+//                sortedDiff[index++] = test[j] - test[i] ;
+//            }
 //        }
-//        for(int x : test)
-//            System.out.print(x+" ");
-//        System.out.println();
-       // System.out.println(new CountOfSmallerNumberAfterSelf().countSmaller(test));
+//        Arrays.sort(sortedDiff);
+//        for(int i=0 ;i<sortedDiff.length ;i++){
+//                System.out.println(sortedDiff[i]);
+//        }
+//        System.out.println(new KthSmallestDifferenceArray().smallestDistancePair(test,2));
+//        System.out.println("methode result " + new KthSmallestDifferenceArray().findKforDiffd(test,67));
+//        System.out.println(new KokoEatingBananas().minEatingSpeed(test,8));
 
-        System.out.println(new CountOfSmallerNumberAfterSelf().countSmaller(test));
-//        System.out.println(new CountOfSmallerNumberAfterSelf().findIndex(rightList,6));
-//        System.out.println(new CountOfSmallerNumberAfterSelf().addInSortedList(rightList,5,4));
+        System.out.println(new KokoEatingBananas().minEatingSpeed(test,1000000000));
+//        System.out.println(test[3] % 6);
     }
 }
