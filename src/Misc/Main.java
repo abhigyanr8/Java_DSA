@@ -1,3 +1,5 @@
+package Misc;
+
 import BinarySearch.*;
 import BinarySearch.KokoEatingBananas;
 import Graphs.MaximumWidthOfBinaryTree;

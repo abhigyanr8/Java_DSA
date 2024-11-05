@@ -1,3 +1,5 @@
+package Misc;
+
 public class FirstOccurence
 {
     public int firstOccurence(int[] a ,int element)

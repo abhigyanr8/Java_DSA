@@ -1,3 +1,5 @@
+package Misc;
+
 public class LexicographicallySmall
 {
     public String getSmallestString(String s)
