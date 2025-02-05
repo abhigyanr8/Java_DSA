@@ -1,4 +1,23 @@
 package Graphs;
+
+/**
+ * Problem: Longest Increasing Path in a Matrix
+ * Given an m x n integer matrix, find the length of the longest increasing path,
+ * where you can only move up, down, left, or right to a cell with a greater value.
+ *
+ * Optimized Solution (DFS + Memoization):
+ * - Use DFS to explore all possible increasing paths.
+ * - Use a memoization (dp array) to store results of previously computed cells,
+ *   avoiding redundant calculations.
+ * - Each cell is computed only once, ensuring efficiency.
+ *
+ * Time Complexity:
+ * ✅ With DP (Optimized): O(m × n) → Each cell is visited once.
+ * ❌ Without DP (Brute Force DFS): O(4^(m×n)) → Exponential time due to redundant calls.
+ *
+ * Space Complexity: O(m × n) (for dp array and recursion stack in worst case).
+ */
+
 public class LongestPathInMatrix {
     public int longestIncreasingPath(int[][] matrix) {
         int col = matrix.length;
@@ -8,6 +27,7 @@ public class LongestPathInMatrix {
         for (int i = 0; i < col; i++) {
             for (int j = 0; j < row; j++) {
                 maxLen = Math.max(maxLen, dfs(matrix, dp, i, j));
+
             }
         }
         return maxLen;
