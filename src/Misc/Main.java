@@ -24,6 +24,7 @@ public class Main {
         int[][] test1 = {{0,0,1,0,0,0,0,1,0,0,0,0,0},{0,0,0,0,0,0,0,1,1,1,0,0,0,},{0,1,1,0,1,0,0,0,0,0,0,0,0},{0,1,0,0,1,1,0,0,1,0,1,0,0},{0,1,0,0,1,1,0,0,1,1,1,0,0},
                 {0,0,0,0,0,0,0,0,0,0,1,0,0},{0,0,0,0,0,0,0,1,1,1,0,0,0},{0,0,0,0,0,0,0,1,1,0,0,0,0}};
         char[][] board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
+        int[][] test2= {{2,1}};
 
 
 //        System.out.println(new CapacityToShipPackagesWithinDDays().shipWithinDays(test,3));
@@ -40,6 +41,7 @@ public class Main {
 //        System.out.println(new NumberOfIslands().numIslands(grid));
 //          new SurroundedRegions().solve(board);
 //        System.out.println(new MaxAreaIsland().maxAreaOfIsland(test1));
-        System.out.println(new WordSearch().exist(board,"ABCCED"));
+//        System.out.println(new WordSearch().exist(board,"ABCCED"));
+        System.out.println(new LongestPathInMatrix().longestIncreasingPath(test2));
     }
 }
