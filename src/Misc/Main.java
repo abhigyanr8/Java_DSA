@@ -25,6 +25,8 @@ public class Main {
                 {0,0,0,0,0,0,0,0,0,0,1,0,0},{0,0,0,0,0,0,0,1,1,1,0,0,0},{0,0,0,0,0,0,0,1,1,0,0,0,0}};
         char[][] board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
         int[][] test2= {{2,1}};
+        int[][] dungeon = {{-2,-3,3},{-5,-10,1},{10,30,-5}};
+        int[][] test3 = {{-3,5}};
 
 
 //        System.out.println(new CapacityToShipPackagesWithinDDays().shipWithinDays(test,3));
@@ -42,6 +44,8 @@ public class Main {
 //          new SurroundedRegions().solve(board);
 //        System.out.println(new MaxAreaIsland().maxAreaOfIsland(test1));
 //        System.out.println(new WordSearch().exist(board,"ABCCED"));
-        System.out.println(new LongestPathInMatrix().longestIncreasingPath(test2));
+//        System.out.println(new LongestPathInMatrix().longestIncreasingPath(test2));
+        System.out.println(new DungeonGame().calculateMinimumHP(test3));
+
     }
 }
