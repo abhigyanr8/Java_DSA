@@ -23,10 +23,11 @@ public class Main {
 //        char[][] board = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
         int[][] test1 = {{0,0,1,0,0,0,0,1,0,0,0,0,0},{0,0,0,0,0,0,0,1,1,1,0,0,0,},{0,1,1,0,1,0,0,0,0,0,0,0,0},{0,1,0,0,1,1,0,0,1,0,1,0,0},{0,1,0,0,1,1,0,0,1,1,1,0,0},
                 {0,0,0,0,0,0,0,0,0,0,1,0,0},{0,0,0,0,0,0,0,1,1,1,0,0,0},{0,0,0,0,0,0,0,1,1,0,0,0,0}};
-        char[][] board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
+      //  char[][] board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
         int[][] test2= {{2,1}};
         int[][] dungeon = {{-2,-3,3},{-5,-10,1},{10,30,-5}};
         int[][] test3 = {{-3,5}};
+        int[][] board = {{1,0},{2,0},{3,1},{3,2}};
 
 
 //        System.out.println(new CapacityToShipPackagesWithinDDays().shipWithinDays(test,3));
@@ -45,7 +46,8 @@ public class Main {
 //        System.out.println(new MaxAreaIsland().maxAreaOfIsland(test1));
 //        System.out.println(new WordSearch().exist(board,"ABCCED"));
 //        System.out.println(new LongestPathInMatrix().longestIncreasingPath(test2));
-        System.out.println(new DungeonGame().calculateMinimumHP(test3));
+//        System.out.println(new DungeonGame().calculateMinimumHP(test3));
 
+        new TopologicalSort().topologicalSort(board);
     }
 }
